@@ -8,6 +8,8 @@ import threading
 import time
 import random
 
+"""Se crean 2 dunciones, una para generar los datos como se solicita en la guia y otra para iniciar el streaming de datos y cliente pueda recibirlos"""
+
 # ========= 1. GENERADOR DE DATOS  =====================
 def iniciar_productor():
     producer = KafkaProducer(
