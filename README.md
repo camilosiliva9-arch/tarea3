@@ -48,7 +48,7 @@ o Visualizar los resultados del procesamiento en tiempo real.
    ```
 5. Acontinuacion se ejecutara el programa [spark.py](./spark.py)
    ```Bash
-    spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.13:4.1.1 streaming_total.py
+    spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.13:4.1.1 spark.py
    ```
 6. Para confirmar Kafka en otra terminal ejecuta
    ```Bash
