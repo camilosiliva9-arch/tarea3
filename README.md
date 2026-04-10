@@ -52,7 +52,7 @@ o Visualizar los resultados del procesamiento en tiempo real.
    ```
 6. Para confirmar Kafka en otra terminal ejecuta
    ```Bash
-     bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic ventas-tiempo-real --from-beginning
+     /opt/Kafka/bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic ventas-tiempo-real --from-beginning
    ```
 
 ### IMPORTANTE ⚠⚠
