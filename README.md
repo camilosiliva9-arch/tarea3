@@ -33,7 +33,7 @@ o Visualizar los resultados del procesamiento en tiempo real.
    ```
 2. Luego se ejecutara el sigueinte comando que va a preparar y formatear el directorio de almacenamiento de un nodo de Apache Kafka cuando se utiliza el modo KRaft
    ```Bash
-     /opt/Kafka/bin/kafka-storage.sh format -t $KAFKA_CLUSTER_ID -c /opt/Kafka/config/server.properties
+     /opt/Kafka/bin/kafka-storage.sh format --standalone -t $KAFKA_CLUSTER_ID -c /opt/Kafka/config/server.properties
    ```
 3. A continaucion se iniciara el servidor de Kafka
    ```Bash
