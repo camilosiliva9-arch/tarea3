@@ -26,7 +26,7 @@ from pyspark.sql.functions import col, sum, to_date, regexp_replace, round
 df = df.replace('', None)
 df = df.replace("", None)
 
-
+# Se hae limpeiza de los datos para asegurar que sean numericos y operables
 df = df.withColumn(
     "Sales",
     regexp_replace(col("Sales"), "[^0-9.]", "")
@@ -51,6 +51,7 @@ df = df.withColumn(
     )
 )
 
+#Se elimina cualquier incongruencia que pueda afectar las operaciones
 df = df.na.drop(subset=["Quantity", "Sales"])
 df = df.replace("", None)
 df = df.na.drop()
@@ -58,6 +59,7 @@ df = df.na.drop()
 df = df.withColumn("Sales_total", col("Sales") * col("Quantity"))
 
 
+""" // OPERACIONES DE ANALISIS // """
 # Productos más vendidos
 print("+++++++++++++++++++PRODUCTOS MAS VENDIDOS++++__++++++++++++++++++++++++++ ")
 df.groupBy("Product Name") \
